@@ -187,17 +187,16 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Freelancer",
+  name: "Camille Mokoli",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "camille.mokoli@gmail.com",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  linkedin: "https://www.linkedin.com/in/camille-mokoli/",
+  github: "https://github.com/CoffeePuma55644",
 };
 
 // social sharing configuration for blog posts
