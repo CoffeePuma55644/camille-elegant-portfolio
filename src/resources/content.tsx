@@ -1,19 +1,28 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Camille",
+  lastName: "Mokoli",
+  name: `Camille Mokoli`,
+  role: "Développeur web frontend",
+  avatar: "/images/avatar.webp",
+  email: "camillemokoli@gmail.com",
+  location: "Africa/Kinshasa", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Français", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,13 +34,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/CoffeePuma55644",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/camille-mokoli-3913b9352/",
     essential: true,
   },
   {
@@ -44,7 +53,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -76,15 +85,16 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Bonjour je suis Camille, un développeur passionné par l'UI/UX et le
+      développement web. Mon but: montrer le meilleur du web. innovants. <br />
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
+  label: "À propos de moi",
+  title: `À propos de moi`, // About – ${person.name}
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -95,21 +105,22 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/coffeepuma",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Je me nomme Camille Elie Mokoli, je suis basée au Congo Kinshasa. Je
+        suis passionnée par l'UI/UX et le développement web. Mon but est de
+        montrer le meilleur du web.
+        <br />
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -118,12 +129,12 @@ const about: About = {
         role: "Senior Design Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesigned the UI/UX for the FLY platform, resulting in a 20%
+            increase in user engagement and 30% faster load times.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Spearheaded the integration of AI tools into design workflows,
+            enabling designers to iterate 50% faster.
           </>,
         ],
         images: [
@@ -142,12 +153,12 @@ const about: About = {
         role: "Lead Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed a design system that unified the brand across multiple
+            platforms, improving design consistency by 40%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Led a cross-functional team to launch a new product line,
+            contributing to a 15% increase in overall company revenue.
           </>,
         ],
         images: [],
@@ -156,26 +167,25 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Études",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Université Protestante au Congo",
+        description: <>Étudiant en informatique</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Mes compétences",
     skills: [
       {
         title: "Figma",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Capable de faire des design premium rapide et selon les meilleures
+            pratiques de dev.
+          </>
         ),
         tags: [
           {
@@ -186,7 +196,7 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/Figma.webp",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -202,7 +212,10 @@ const about: About = {
       {
         title: "Next.js",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Création de sites web dynamiques et performants avec Next.js et
+            React.
+          </>
         ),
         tags: [
           {
@@ -221,7 +234,7 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/NextJS.webp",
             alt: "Project image",
             width: 16,
             height: 9,
