@@ -144,6 +144,7 @@ export type SchemaConfig = {
 export type SameAsConfig = {
   threads: string;
   linkedin: string;
+  github: string;
   discord: string;
 };
 
